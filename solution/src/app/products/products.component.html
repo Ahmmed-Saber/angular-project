@@ -2,3 +2,63 @@
 <br>
 <h3>We offer an explicit discount of:{{Discount}} </h3>
 
+<br>
+
+<!-- lab2 -->
+
+<!-- 1 -->
+<h3 *ngIf="Discount;then thenn;else elsee"></h3>
+
+<ng-template #elsee>
+<h3></h3>
+</ng-template>
+<ng-template #thenn>
+<h3>{{"We offer an explicit discount of "+ Discount}}</h3>
+</ng-template>
+
+<!-- 2 -->
+<select >
+    <option value="default">categories </option>
+    <option *ngFor="let item of CategoryList1" [value]="CategoryList1">
+        {{item}}
+    </option>
+</select>
+
+<!-- 3 -->
+<div *ngIf="isPurchsed; then thenBlock; else elseBlock"></div>
+
+  <ng-template #elseBlock>
+    <table class="table">
+      <tr *ngFor="let item of ProductList1">
+        <td>{{ item }}</td>
+      </tr>
+    </table>
+    </ng-template>
+
+      <ng-template #thenBlock>
+        <h2>Thanks for purshasing from our store  {{ClientName}}</h2>
+    </ng-template>
+
+
+    <button (click)="purshase()" class="btn-warning">Buy </button>
+
+
+        <br>   
+
+        <!-- 4 -->
+
+        <input type="text" [(ngModel)]="UserName"/>
+        {{UserName}}
+
+        <!-- 5 -->
+<br>
+        {{fullname |uppercase}}
+
+        <br>
+        <br>
+        <!-- 6///// -->
+        {{Discount| percent}}
+
+        
+
+

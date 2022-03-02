@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
     this.CategoryList=[];
     this.ProductList=[];
     this.Discount=Discountoffers.d2
-    
+ 
 
   }
   Discount:Discountoffers;
@@ -28,7 +28,20 @@ export class ProductsComponent implements OnInit {
    ClientName:string;
    IsPurshased:boolean;
    CategoryList:Icategory[];
-   
+   CategoryList1:string[]=["number","string"]
+   ProductList1:string[]=["ID","name","Quantity","Price","Img"]
+   isPurchsed=false;
+   UserName="";
+   fullname:string="ahmed saber";
+
+
+   purshase(){
+
+    this.isPurchsed=true;
+ 
+ 
+   }
+ 
 
   ngOnInit(): void {
   }
