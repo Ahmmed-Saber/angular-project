@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { iproduct } from '../sharedclassesandtypes/IProdect';
 import { Icategory } from '../sharedclassesandtypes/Icategory';
 import {Discountoffers} from '../sharedclassesandtypes/Dissacountoffers';
+import { ProductServiceService } from '../service/product-service.service';
 
 @Component({
   selector: 'app-products',
@@ -10,7 +11,7 @@ import {Discountoffers} from '../sharedclassesandtypes/Dissacountoffers';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { 
+  constructor(private productService:ProductServiceService){
     this.Storename="onlinestore";
     this.StoreLogo="";
     this.ClientName="ahmed saber"
@@ -33,6 +34,12 @@ export class ProductsComponent implements OnInit {
    isPurchsed=false;
    UserName="";
    fullname:string="ahmed saber";
+   productList:any;
+
+   renderValues(){
+  
+    return this.productList=this.productService.GetAllProducts;
+  }
 
 
    purshase(){

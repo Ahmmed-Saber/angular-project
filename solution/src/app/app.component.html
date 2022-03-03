@@ -1,7 +1,30 @@
- <app-header></app-header>
+<app-header></app-header>
 <app-home></app-home>
 <app-footer></app-footer>
 <h2>hiiiii</h2> 
+
+<app-products></app-products>
+
+<br>
+<p>lab3</p>
+<br>
+
+<button (click)="DisplayProducts()">Display</button>
+<div *ngIf="flag then BLOCK;"></div>
+
+<ng-template #BLOCK>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        </table>
+
+</ng-template>
 
 
 
