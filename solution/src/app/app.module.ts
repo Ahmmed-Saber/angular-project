@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
 import { ProductsComponent } from './products/products.component';
 import { PercentPipe } from './percent.pipe';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PercentPipe } from './percent.pipe';
     HomeComponent,
     MainComponent,
     ProductsComponent,
-    PercentPipe
+    PercentPipe,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
